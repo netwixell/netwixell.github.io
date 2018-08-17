@@ -1,7 +1,7 @@
 var conf={
 	geo:{
 		"method": "point",
-		"token" : '76793d5test0cf77',///
+		"token" : '76793d5test0cf77',//
 	},
 	carry:{
 		"method": "carry",
