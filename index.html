@@ -9,6 +9,32 @@
 
 
 	<script>
+		var conf={
+			geo:{
+				"method": "point",
+				"token" : '76793d5test0cf77',///
+			},
+			carry:{
+				"method": "carry",
+				"type_company" : 0,
+				"token" : "76793d5test0cf77",///
+				"weight" : Number.parseFloat("$cart->getTotalWeight()"),///
+				"x" : 14,///
+				"y" : 32,///
+				"z" : 20,///
+			},
+			delivery:{
+				"method": "delivery",
+				"type_company" : 0,
+				"city" : "{$delivery->city|escape:'htmlall':'UTF-8'}",///
+				"token" : "76793d5test0cf77",///
+				"area" : "{$delivery->city|escape:'htmlall':'UTF-8'}",///
+				"address" : "{$cart->id_address_delivery}",
+				"x" : 10,///
+				"y" : 10,///
+				"z" : 10,///
+			}
+		};
 		if(navigator.geolocation){
 			navigator.geolocation.getCurrentPosition(function(res){
 				conf.geo.lon=res.coords.longitude;//37.597008;

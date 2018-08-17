@@ -1,30 +1,3 @@
-var conf={
-	geo:{
-		"method": "point",
-		"token" : '76793d5test0cf77',///
-	},
-	carry:{
-		"method": "carry",
-		"type_company" : 0,
-		"code": "194300",///
-		"token" : "76793d5test0cf77",///
-		"weight" : 4.2,///
-		"x" : 14,///
-		"y" : 32,///
-		"z" : 20,///
-	},
-	delivery:{
-		"method": "delivery",
-		"type_company" : 0,
-		"city" : "Москва",///
-		"token" : "76793d5test0cf77",///
-		"area" : "Москва",///
-		"address" : "Москва, Тверская 6",///
-		"x" : 10,///
-		"y" : 10,///
-		"z" : 10,///
-	}
-};
 var mod={
 	geo:function(json){
 		var answer = document.getElementsByClassName('result')[0];
