@@ -11,8 +11,8 @@
 	<script>
 		if(navigator.geolocation){
 			navigator.geolocation.getCurrentPosition(function(res){
-				conf.geo.lon=37.597008;
-				conf.geo.lat=55.584703;
+				conf.geo.lon=res.coords.longitude;//37.597008;
+				conf.geo.lat=res.coords.latitude;//55.584703;
 				mod.geo(conf.geo);
 			});
 		}
