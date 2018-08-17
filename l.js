@@ -5,7 +5,7 @@ var conf={
 	},
 	carry:{
 		"method": "carry",
-		"type_company" : 2,
+		"type_company" : 0,
 		"code": "194300",///
 		"token" : "76793d5test0cf77",///
 		//"weight" : 4.2,///
@@ -15,7 +15,7 @@ var conf={
 	},
 	delivery:{
 		"method": "delivery",
-		"type_company" : 2,
+		"type_company" : 0,
 		"city" : "Москва",///
 		"token" : "76793d5test0cf77",///
 		"area" : "Москва",///
