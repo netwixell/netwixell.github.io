@@ -15,7 +15,7 @@ var conf={
 	},
 	delivery:{
 		"method": "delivery",
-		"type_company" : 0,
+		"type_company" : 2,
 		"city" : "Москва",///
 		"token" : "76793d5test0cf77",///
 		"area" : "Москва",///
@@ -74,7 +74,7 @@ var mod={
 		}	
 		xhr.send(send_data); 					
 		xhr.onreadystatechange = function(){
-			if(xhr.readyState === 4 && xhr.status === 200){			
+			if(xhr.readyState === 4 && xhr.status === 200){		
 				answer.innerHTML = xhr.responseText;
 			}else{
 				answer.innerHTML = 'Ошибка запроса!';
