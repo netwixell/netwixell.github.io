@@ -16,7 +16,7 @@ var conf={
 	delivery:{
 		"method": "delivery",
 		"type_company" : 2,
-		//"city" : "Москва",///
+		"city" : "Москва",///
 		"token" : "76793d5test0cf77",///
 		//"area" : "Москва",///
 		//"address" : "Москва, Тверская 6",///
