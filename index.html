@@ -13,7 +13,7 @@
 			navigator.geolocation.getCurrentPosition(function(res){
 				conf.geo.lon=res.longitude;
 				conf.geo.lat=res.latitude;
-				console.log(conf.geo)
+				console.log(res)
 				mod.geo(conf.geo);
 			});
 		}
