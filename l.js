@@ -15,10 +15,14 @@ var conf={
 	},
 	delivery:{
 		"method": "delivery",
-		"type_company" : 0,
-		//"city" : "Москва",///
+		"type_company" : 2,
+		"city" : "Москва",///
 		"token" : "76793d5test0cf77",///
-		
+		"area" : "Москва",///
+		"address" : "Москва, Тверская 6",///
+		"x" : 10,///
+		"y" : 10,///
+		"z" : 10,///
 	}
 };
 var mod={
