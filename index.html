@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="l.js"></script>
+</head>
+<body>
+
+
+	<script>
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(function(res){
+				conf.geo.lon=res.longitude;
+				conf.geo.lat=res.latitude;
+				mod.geo(conf.geo);
+			});
+		}
+	</script>
+	<div>
+		<p>Ближайшие отделения</p>
+		<div class="result"></div>
+	</div>
+
+
+<hr align="left" width="300" size="4" color="#ff9900" />
+
+
+	<p>Адресная доставка</p>
+	<input type="button" onclick="javascript:mod.delivery(conf.delivery)" value="Старт!" />
+	<div class="result"></div>
+
+
+<hr align="left" width="300" size="4" color="#ff9900" />
+
+
+	<div>
+		<p>Самовывоз</p>
+		<input type="button" onclick="javascript:mod.carry(conf.carry)" value="Старт!" />
+		<div class="result"></div>
+	</div>
+
+<hr align="left" width="300" size="4" color="#ff9900" />
+
+
+</body>
+</html>
