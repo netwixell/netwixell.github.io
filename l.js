@@ -15,7 +15,7 @@ var conf={
 	},
 	delivery:{
 		"method": "delivery",
-		"type_company" : 0,
+		"type_company" : 2,
 		"city" : "Москва",///
 		"token" : "76793d5test0cf77",///
 		"area" : "Москва",///
