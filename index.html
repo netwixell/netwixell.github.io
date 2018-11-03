@@ -3,72 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script src="l.js"></script>
 </head>
 <body>
 
-
 	<script>
-		var conf={
-			geo:{
-				"method": "point",
-				"token" : '76793d5test0cf77',///
-			},
-			carry:{
-				"method": "carry",
-				"type_company" : 0,
-				"code": "194300",///
-				"token" : "76793d5test0cf77",///
-				"weight" : Number.parseFloat("{$cart->getTotalWeight()}"),///
-				"x" : 14,///
-				"y" : 32,///
-				"z" : 20,///
-			},
-			delivery:{
-				"method": "delivery",
-				"type_company" : 0,
-				"city" : "{$delivery->city|escape:'htmlall':'UTF-8'}",///
-				"token" : "76793d5test0cf77",///
-				"area" : "{$delivery->city|escape:'htmlall':'UTF-8'}",///
-				"address" : "{$cart->id_address_delivery}",
-				"x" : 10,///
-				"y" : 10,///
-				"z" : 10,///
-			}
-		};
-		if(navigator.geolocation){
-			navigator.geolocation.getCurrentPosition(function(res){
-				conf.geo.lon=res.coords.longitude;//37.597008;
-				conf.geo.lat=res.coords.latitude;//55.584703;
-				mod.geo(conf.geo);
+		if ('serviceWorker' in navigator) {
+		    window.addEventListener('load', function() {
+			navigator.serviceWorker.register('/sw.js').then(function(registration) {
+			    // Регистрация успешна
+			    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}).catch(function(err) {
+			    // Регистрация не успешна
+			    console.log('ServiceWorker registration failed: ', err);
 			});
+		    });
 		}
 	</script>
-	<div>
-		<p>Ближайшие отделения</p>
-		<div class="result"></div>
-	</div>
-
-
-<hr align="left" width="300" size="4" color="#ff9900" />
-
-
-	<p>Адресная доставка</p>
-	<input type="button" onclick="javascript:mod.delivery(conf.delivery)" value="Старт!" />
-	<div class="result"></div>
-
-
-<hr align="left" width="300" size="4" color="#ff9900" />
-
-
-	<div>
-		<p>Самовывоз</p>
-		<input type="button" onclick="javascript:mod.carry(conf.carry)" value="Старт!" />
-		<div class="result"></div>
-	</div>
-
-<hr align="left" width="300" size="4" color="#ff9900" />
-
-
 </body>
 </html>
