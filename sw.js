@@ -1,7 +1,6 @@
 var CACHE_NAME = 'my-web-app-cache';
 		var urlsToCache = [
 		'/',
-		  '/l.js'
 		];
 		self.addEventListener('install', function(event) {
 		  event.waitUntil(
